@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Support Dashboard</title>
+    <link rel="stylesheet" type="text/css" th:href="@{/requests.css}" />
+</head>
+<body>
+    <header>
+        <h1>Support Dashboard</h1>
+    </header>
+
+    <div class="dashboard">
+        <table>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>First Name</th>
+                    <th>Last Name</th>
+                    <th>Email</th>
+                    <th>Title</th>
+                    <th>Query</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr th:each="request : ${requests}">
+                    <td th:text="${request.id}"></td>
+                    <td th:text="${request.FirstName}"></td>
+                    <td th:text="${request.LastName}"></td>
+                    <td th:text="${request.Email}"></td>
+                    <td th:text="${request.Title}"></td>
+                    <td th:text="${request.Query}"></td>
+                    <td>
+                        <!-- Form for delete button -->
+                        <form th:action="@{/delete}" method="post">
+                            <input type="hidden" name="id" th:value="${request.id}" />
+                            <button type="submit">Delete</button>
+                        </form>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>

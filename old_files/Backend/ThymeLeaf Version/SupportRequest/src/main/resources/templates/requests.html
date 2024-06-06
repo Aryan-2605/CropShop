@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Support Dashboard</title>
+    <link rel="stylesheet" type="text/css" th:href="@{/requests.css}" />
+</head>
+<body>
+    <header>
+        <h1>Support Dashboard</h1>
+    </header>
+
+    <div class="dashboard">
+        <table>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>First Name</th>
+                    <th>Last Name</th>
+                    <th>Email</th>
+                    <th>Title</th>
+                    <th>Query</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr th:each="requests : ${request}">
+                    <td th:text="${requests.ID}"></td>
+                    <td th:text="${requests.FirstName}"></td>
+                    <td th:text="${requests.LastName}"></td>
+                    <td th:text="${requests.Email}"></td>
+                    <td th:text="${requests.Title}"></td>
+                    <td th:text="${requests.Query}"></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <link rel="stylesheet" type="text/css" th:href="@{/support.css}" />
+        <title>CropShop | Contact Us</title>
+    </head>
+    <body>
+        <div class="header">
+            <div class ="s1">
+                <div class = "bar">
+                    <img th:src="@{/images/CropShop.png}" class="logo">
+                </div>
+                <div class="f1">
+                    <a class = "cats">Home</a>
+                </div>
+                <div class="f1">
+                    <a class = "cats">Why CropShop</a>
+                </div>
+                <div class="f1">
+                    <a class = "cats">Produce</a>
+                </div>
+                <div class="f1">
+                    <a class = "cats">Blog</a>
+                </div>
+                <div class="f1">
+                    <a class = "cats">About</a>
+                </div>
+                <button class="login">Login</button>
+            </div>
+            <div class="support">
+                <h1 class="s1">support</h1>
+            </div>
+        </div>
+        <div class="test">
+            <div class="top-center"> 
+                <h1  class="q1"> Have a Query?</h1>
+            </div>
+            <div class="content">
+                <h2 class="t1"> Ask how we can help you:</h2>
+                <h3 class="t2">See our platform in action</h3>
+                <p class="text"> CropShop is a peer-to-peer platform that directly safely links consumers to farmers.</p>
+                <h3 class="t2">Our mission statement</h3>
+                <p class="text"> 
+                  Our goal is to allow farmers to sell their produce allowing farms to maximize profits, lower prices for consumers and advocating the
+                  end of monopsonist produce markets that financially exploit both farmers and consumers. 
+                </p>
+                <h3 class="t2">What can our staff help with?</h3>
+                <ul class="bp">
+                  <li>Account login issues</li>
+                  <li>Purchase disputes</li>
+                  <li>Repeat transactions</li>
+                  <li>Spoilt Goods</li>
+                  <li>Reporting a Farmer</li>
+                  <li>Verifying your identity to become a farmer</li>
+                  <li>Refunds</li>
+                </ul>
+                <h3 class="t2">Want to become a Farmer?</h3>
+                <p class="text">
+                  To become a Farmer you must verify your business infomation in the websites dashboard. Be prepared to fillout information limited but not exclusive to:
+                  Form of ID, Business Address, Business Name, Account details. 
+                  If you are having any issues with the dashboard, please contact us by filling out the support form on the right side.
+                </p>
+            </div>
+                
+            <div class="content2">
+                <p class="ps"> Please note: all fields are required.</p>
+                <p th:if="${message != null}" class="success" th:text="${message}"></p>
+   	 <div th:if="${fErrorOB != null}" class="error" th:text="${fErrorOB}"></div>
+    <div th:if="${lErrorOB != null}" class="error" th:text="${lErrorOB}"></div>
+    <div th:if="${eErrorOB != null}" class="error" th:text="${eErrorOB}"></div>
+    <div th:if="${tErrorOB != null}" class="error" th:text="${tErrorOB}"></div>
+    <div th:if="${qErrorOB != null}" class="error" th:text="${qErrorOB}"></div>
+
+               
+                <form th:action="@{/support}" method="post" role="form" th:object = "${request}">
+                  <label for="firstName">First Name:</label>
+                  <input th:field="*{FirstName}" type="text" id="firstName" name="firstName" required>
+          
+                  <label for="lastName">Last Name:</label>
+                  <input th:field="*{LastName}" type="text" id="lastName" name="lastName" required>
+          
+                  <label for="email">Email:</label>
+                  <input th:field="*{Email}" type="email" id="email" name="email" required>
+          
+                  <label for="title">Title:</label>
+                  <input th:field="*{Title}" type="text" id="title" name="title" required>
+          
+                  <label for="query">Query:</label>
+                  <textarea th:field="*{Query}" id="query" name="query" rows="4" required></textarea>
+          
+                  <input type="submit" value="Submit">
+              </form>
+
+            </div>
+ 
+        </div>
+        <footer>
+          <p>&copy; 2024 CropShop. Group 4 Projects.</p>
+      </footer>
+    </body>
+</html>

@@ -1,0 +1,237 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.header {
+  height: 400px;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  background-image: url('images/Background.jpg');
+  background-size: cover; 
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.logo {
+  width: 150px; /* Adjust CropShop width */
+  height: 100%;
+  user-select: none
+}
+
+.s1 {
+  padding-top: 30px;
+  height: 140px; 
+  display: flex;
+  align-items: center;
+  justify-content: space-between; 
+}
+
+.f1 {
+  display: inline-block;
+  padding: 10px;
+}
+.cats {
+  color: white;
+  font-size: 20px;
+  font-family: arial;
+  user-select: none;
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.cats::after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  width: 0;
+  height: 3px; /* Dont change thickness to more than 3 it looks ugly */
+  background-color: #ffffff;
+  transition: width 0.3s ease;
+  transform: translateX(-50%);
+
+}
+.cats:hover{
+  cursor:pointer;
+}
+
+.cats:hover::after {
+  width: 100%; 
+
+}
+
+.cats:active {
+  opacity: 0.7;
+
+}
+
+.bar {
+  display: inline-block;
+}
+
+button {
+  padding-right: 20px;
+  margin-right: 30px;
+}
+.support{
+  margin-top: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center; 
+}
+.s1{
+
+  font-size: 80px;
+  font-family: Arial, Helvetica, sans-serif;
+  color: white;
+}
+.login{
+  color: white;
+  margin-top: 10px;
+  padding-left: 20px;
+  width: 100%;
+  padding-top: 10px;
+  max-width: 150px;
+  padding-bottom: 10px;
+  background-color: green;
+  border: none;
+  font-size: 17.6px;
+  cursor: pointer;
+  box-shadow: 10px 3px 10px 10px rgb(12, 12, 12);
+  transition: opacity 0.15s, box-shadow 0.15s;
+}
+.login:hover{
+  opacity: 0.9;
+  box-shadow: 10px 3px 10px 10px rgba(12, 12, 12, 0.7);
+}
+.login:active{
+  opacity: 0.8;
+  box-shadow: 10px 3px 10px 10px rgba(12, 12, 12, 0.5);
+}
+.test{
+  /* border: 2px solid blue; */
+  height: 100%;
+  display: block;
+
+}
+.content {
+  float: left;
+  /* border: 2px solid red; */
+  flex: 1;
+  height: 600px;
+  width: 50%;
+}
+
+.content2 {
+  float: left;
+  /* border: 2px solid red; */
+  flex: 1;
+  height: 600px;
+  width: 49%;
+}
+.q1{
+  color: green;
+  font-size: 40px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.top-center {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+.t1{
+  margin-left: 40px;
+  font-family: Arial, Helvetica, sans-serif;
+  color: green;
+}
+.t2{
+  font-family: Arial, Helvetica, sans-serif;
+  margin-left: 40px;
+  color: green;
+  font-weight: normal;
+  font-size: 16px;
+  margin-top: 15px;
+}
+.text{
+  margin-left: 40px;
+  margin-top: 10px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 14px;
+}
+.bp{
+  margin-left: 50px;
+  margin-top: 10px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 14px;
+}
+.ps{
+  margin-left: 25%;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 14px;
+  margin-top: 15px;
+  color: grey;
+  margin-bottom: 10px;
+}
+
+/* This is the stylee for the form. You guys can change it */
+
+form {
+  max-width: 400px;
+  margin-left: 25%;
+}
+
+label {
+  display: block;
+  margin-bottom: 8px;
+}
+
+input,
+textarea {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 16px;
+  box-sizing: border-box;
+}
+
+input[type="submit"] {
+  background-color: #4caf50;
+  color: white;
+  cursor: pointer;
+  border: none;
+}
+
+input[type="submit"]:hover {
+  background-color: #45a049;
+}
+
+footer {
+  background: url('images/Background.jpg');
+  background-size: cover;
+  color: white;
+  padding: 5px;
+  text-align: center;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+.success {
+  padding: 10px;
+  color: green;
+  background-color: rgba(223,240,216,255);
+  border: 1px solid green;
+  font-size: 13px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  font-family: Arial, Helvetica, sans-serif;
+  width: 75%;
+  text-align: center;
+  box-sizing: border-box;
+  margin: 0 auto;
+  margin-bottom: 10px;
+}
